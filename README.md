@@ -12,7 +12,7 @@ npm install mongoose
 ## Conexão com o Banco de Dados e Definição de Schema
 
 import mongoose from "mongoose";
-
+```
 const UserSchema = new mongoose.Schema({
     nome: { type: String, required: true },
     email: { type: String, required: true },
@@ -24,7 +24,7 @@ const UserSchema = new mongoose.Schema({
 });
 
 export default mongoose.models.User || mongoose.model('User', UserSchema);
-
+```
 ## Rotas da API
 import { Router } from 'express';
 import { getUsers, getUser, createUser, deleteUser, updateUser } from '../services/users.js';
