@@ -67,7 +67,6 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
 ## Exemplos de Utilização da API
 1. Post
   URL: localhost:3000/users
-
   JSON:
 ```
 {
@@ -80,8 +79,6 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
   "rg": "356322695"
 }
 ```
-
-
 3. Get all users
    URL: localhost:3000/users
 
@@ -91,7 +88,7 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
 5. Put(altera os dados de um usuário como parâmetro o seu ID no banco de dados)
    URL: localhost:3000/users/663971303d78f2f8a00189af
    JSON:
-   ```
+```
 {
   "nome": "Novo nome",
   "email": "guilhermeattilio@gmail.com",
@@ -102,7 +99,6 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
   "rg": "356322695"
 }
 ```
-
 
 7. Delete(deleta os dados do usuário do banco de dados com base no seu id)
    URL: localhost:3000/users/663971303d78f2f8a00189af
@@ -124,7 +120,6 @@ Criado um arquivo .babelrc na raíz do projeto com o seguinte conteúdo:
     "presets": ["@babel/preset-env"]
 }
 ```
-
 Para rodar os testes é usado o comando:
 ```
   npm test
