@@ -1,15 +1,15 @@
 ## Programação Web - TDE sobre Node.js e MongoDB
-Integrantes: Guilherme Ciello, Nathan Gowacki, Luiz Mocelin
+# Integrantes: Guilherme Ciello, Nathan Gowacki, Luiz Mocelin
 O TDE consiste na criação de uma API utilizando o framework Express, Mongoose e Typescript e MongoDB como banco de dados. Na API é possível adicionar, pesquisar, atualizar e excluir dados de usuários (Nome, Email, Idade, Gênero, Telefone, CPF e RG). O CPF e o e-mail possuem validações através de funções que são testadas com a utilização do Jest, que é um framework de teste em Javascript.
 
-Configuração Inicial
+## Configuração Inicial
 1. Criar uma database no MongoDB Atlas.
 2. Instalar as dependências do projeto:
 npm install express
 npm install mongodb
 npm install mongoose
 
-Conexão com o Banco de Dados e Definição de Schema
+## Conexão com o Banco de Dados e Definição de Schema
 
 import mongoose from "mongoose";
 
@@ -25,7 +25,7 @@ const UserSchema = new mongoose.Schema({
 
 export default mongoose.models.User || mongoose.model('User', UserSchema);
 
-Rotas da API
+## Rotas da API
 import { Router } from 'express';
 import { getUsers, getUser, createUser, deleteUser, updateUser } from '../services/users.js';
 
@@ -62,7 +62,7 @@ export default router;
 
 Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
 
-Exemplos de Utilização da API
+## Exemplos de Utilização da API
 1. Post
   URL: localhost:3000/users
   JSON:
@@ -99,7 +99,7 @@ Exemplos de Utilização da API
    URL: localhost:3000/users/663971303d78f2f8a00189af
 
 
-Testes Unitários
+## Testes Unitários
 Para os testes unitários, foi usado o Jest, framework de testes em Javascript. A instalação foi feita através do comando:
 npm install --save-dev jest
 
