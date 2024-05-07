@@ -5,14 +5,15 @@ O TDE consiste na criação de uma API utilizando o framework Express, Mongoose 
 ## Configuração Inicial
 1. Criar uma database no MongoDB Atlas.
 2. Instalar as dependências do projeto:
+```
 npm install express
 npm install mongodb
 npm install mongoose
-
-## Conexão com o Banco de Dados e Definição de Schema
-
-import mongoose from "mongoose";
 ```
+## Conexão com o Banco de Dados e Definição de Schema
+```
+import mongoose from "mongoose";
+
 const UserSchema = new mongoose.Schema({
     nome: { type: String, required: true },
     email: { type: String, required: true },
@@ -26,6 +27,7 @@ const UserSchema = new mongoose.Schema({
 export default mongoose.models.User || mongoose.model('User', UserSchema);
 ```
 ## Rotas da API
+```
 import { Router } from 'express';
 import { getUsers, getUser, createUser, deleteUser, updateUser } from '../services/users.js';
 
@@ -58,13 +60,14 @@ router.put("/:id", async (request, response) => {
 });
 
 export default router;
-
+```
 
 Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
 
 ## Exemplos de Utilização da API
 1. Post
   URL: localhost:3000/users
+```
   JSON:
 {
   "nome": "Guilherme Attilio",
@@ -75,16 +78,18 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
   "cpf": "099.419.280-02",
   "rg": "356322695"
 }
+```
 
-2. Get all users
+3. Get all users
    URL: localhost:3000/users
 
-3. Get one user by id(apresenta o resultado de um usuario como parâmetro o seu ID no banco de dados)
+4. Get one user by id(apresenta o resultado de um usuario como parâmetro o seu ID no banco de dados)
    URL: localhost:3000/users/663971303d78f2f8a00189af
 
-4. Put(altera os dados de um usuário como parâmetro o seu ID no banco de dados)
+5. Put(altera os dados de um usuário como parâmetro o seu ID no banco de dados)
    URL: localhost:3000/users/663971303d78f2f8a00189af
    JSON:
+   ```
 {
   "nome": "Novo nome",
   "email": "guilhermeattilio@gmail.com",
@@ -94,8 +99,9 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
   "cpf": "099.419.280-02",
   "rg": "356322695"
 }
+```
 
-5. Delete(deleta os dados do usuário do banco de dados com base no seu id)
+7. Delete(deleta os dados do usuário do banco de dados com base no seu id)
    URL: localhost:3000/users/663971303d78f2f8a00189af
 
 
@@ -104,15 +110,18 @@ Para os testes unitários, foi usado o Jest, framework de testes em Javascript. 
 npm install --save-dev jest
 
 O arquivo de testes deve conter a extensão .test.js. Para exportar as funções testadas no arquivo de testes, foi usado o transcompilador Babel:
-
+```
 npm install --save-dev @babel/core @babel/preset-env babel-jest
-
+```
 Criado um arquivo .babelrc na raíz do projeto com o seguinte conteúdo:
-
+```
 {
     "presets": ["@babel/preset-env"]
 }
+```
 
 Para rodar os testes é usado o comando:
+```
   npm test
+ ```
 
