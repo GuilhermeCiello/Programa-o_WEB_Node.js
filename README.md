@@ -99,7 +99,7 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
   "cpf": "099.419.280-02",
   "rg": "356322695"
 }
-```
+ ```
 
 7. Delete(deleta os dados do usuário do banco de dados com base no seu id)
    URL: localhost:3000/users/663971303d78f2f8a00189af
@@ -107,7 +107,9 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
 
 ## Testes Unitários
 Para os testes unitários, foi usado o Jest, framework de testes em Javascript. A instalação foi feita através do comando:
+```
 npm install --save-dev jest
+```
 
 O arquivo de testes deve conter a extensão .test.js. Para exportar as funções testadas no arquivo de testes, foi usado o transcompilador Babel:
 ```
