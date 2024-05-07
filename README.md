@@ -1,4 +1,4 @@
-Programação Web - TDE sobre Node.js e MongoDB
+## Programação Web - TDE sobre Node.js e MongoDB
 Integrantes: Guilherme Ciello, Nathan Gowacki, Luiz Mocelin
 O TDE consiste na criação de uma API utilizando o framework Express, Mongoose e Typescript e MongoDB como banco de dados. Na API é possível adicionar, pesquisar, atualizar e excluir dados de usuários (Nome, Email, Idade, Gênero, Telefone, CPF e RG). O CPF e o e-mail possuem validações através de funções que são testadas com a utilização do Jest, que é um framework de teste em Javascript.
 
