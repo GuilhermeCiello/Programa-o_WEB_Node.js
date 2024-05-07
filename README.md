@@ -67,8 +67,9 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
 ## Exemplos de Utilização da API
 1. Post
   URL: localhost:3000/users
-```
+
   JSON:
+```
 {
   "nome": "Guilherme Attilio",
   "email": "guilhermeattilio@gmail.com",
@@ -79,6 +80,7 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
   "rg": "356322695"
 }
 ```
+
 
 3. Get all users
    URL: localhost:3000/users
@@ -99,7 +101,8 @@ Os Endpoints foram feitos usando a extensão do vs.code chamada Thunder Client.
   "cpf": "099.419.280-02",
   "rg": "356322695"
 }
- ```
+```
+
 
 7. Delete(deleta os dados do usuário do banco de dados com base no seu id)
    URL: localhost:3000/users/663971303d78f2f8a00189af
